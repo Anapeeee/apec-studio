@@ -5,20 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APEC Consulting</title>
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica', 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: #ffffff; /* White background */
+            color: #333; /* Dark gray text for readability */
         }
+
+        /* Header Styles */
         header {
-            background-color: #ffffff;
-            border-bottom: 2px solid #eaeaea;
-            padding: 10px 20px;
+            background-color: #0a1f44; /* Dark blue */
+            color: white;
+            padding: 20px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         header img {
             height: 50px;
@@ -29,32 +33,49 @@
         }
         nav a {
             text-decoration: none;
-            color: #333;
+            color: white;
             font-weight: bold;
+            transition: color 0.3s;
         }
         nav a:hover {
-            color: #0073e6;
+            color: #66b2ff; /* Light blue */
         }
+
+        /* Hero Section */
         .hero {
             text-align: center;
-            padding: 50px 20px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 70px 20px;
+            background-color: #f5faff; /* Light blue background */
+            color: #0a1f44; /* Dark blue text */
         }
         .hero h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
+            font-weight: bold;
         }
         .hero p {
             margin: 20px 0;
             font-size: 1.2em;
-            color: #555;
+            color: #555; /* Medium gray */
         }
+
+        /* Section Styles */
         .section {
             padding: 40px 20px;
             max-width: 900px;
             margin: 0 auto;
         }
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #0a1f44; /* Dark blue */
+        }
+        .section p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        /* Services Section */
         .services {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -63,20 +84,41 @@
         .service {
             background: #ffffff;
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }
         .service h3 {
             margin-bottom: 10px;
-            color: #0073e6;
+            color: #0073e6; /* Vibrant blue */
         }
+        .service p {
+            color: #333;
+        }
+
+        /* Footer Styles */
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #ffffff;
-            border-top: 2px solid #eaeaea;
-            color: #555;
+            background-color: #0a1f44; /* Dark blue */
+            color: white;
+            border-top: 3px solid #66b2ff; /* Light blue accent */
+            font-size: 0.9em;
+        }
+        footer p {
+            margin: 0;
+        }
+        footer a {
+            color: #66b2ff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -134,7 +176,7 @@
 </section>
 
 <footer>
-    <p>&copy; 2024 APEC Consulting. All rights reserved.</p>
+    <p>&copy; 2024 APEC Consulting. All rights reserved. <a href="#home">Back to top</a></p>
 </footer>
 
 </body>
