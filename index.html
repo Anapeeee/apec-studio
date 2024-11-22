@@ -5,110 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APE Consulting</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&family=Open+Sans:wght@300;600&display=swap');
+
         /* Global Styles */
         body {
             font-family: 'Helvetica', 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff; /* White background */
-            color: #333; /* Dark gray text for readability */
+            background-color: #f8f9fa; /* Subtle off-white */
+            color: #333;
+            line-height: 1.6;
         }
 
         /* Header Styles */
         header {
-            background-color: #0a1f44; /* Dark blue */
+            background-color: #0a1f44; /* Rich dark blue */
             color: white;
-            padding: 20px 20px;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         header img {
-            height: 50px;
+            height: 60px;
         }
         nav {
             display: flex;
-            gap: 20px;
+            gap: 25px;
         }
         nav a {
             text-decoration: none;
             color: white;
-            font-weight: bold;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
             transition: color 0.3s;
         }
         nav a:hover {
-            color: #66b2ff; /* Light blue */
+            color: #66b2ff; /* Bright blue accent */
         }
 
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 70px 20px;
-            background-color: #f5faff; /* Light blue background */
-            color: #0a1f44; /* Dark blue text */
+            padding: 80px 20px;
+            background: linear-gradient(to bottom, #0a1f44, #1b3667);
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            position: relative;
+        }
+        .hero img {
+            width: 150px;
+            margin: 20px auto;
+            border-radius: 50%;
+            background: white;
+            padding: 10px;
         }
         .hero h1 {
+            font-size: 3rem;
             margin: 0;
-            font-size: 3em;
             font-weight: bold;
         }
         .hero p {
-            margin: 20px 0;
-            font-size: 1.2em;
-            color: #555; /* Medium gray */
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #cfe0f7;
         }
 
         /* Section Styles */
         .section {
-            padding: 40px 20px;
-            max-width: 900px;
+            padding: 60px 20px;
+            max-width: 1100px;
             margin: 0 auto;
         }
         .section h2 {
-            font-size: 2em;
+            font-size: 2.2rem;
             margin-bottom: 20px;
-            color: #0a1f44; /* Dark blue */
+            text-align: center;
+            color: #0a1f44;
         }
         .section p {
-            font-size: 1em;
-            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1rem;
+            color: #555;
         }
 
         /* Services Section */
         .services {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
         .service {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
         }
         .service:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
         .service h3 {
+            font-size: 1.4rem;
+            color: #0073e6;
             margin-bottom: 10px;
-            color: #0073e6; /* Vibrant blue */
         }
         .service p {
-            color: #333;
+            font-size: 0.9rem;
+            color: #666;
         }
 
-        /* Footer Styles */
+        /* Contact Section */
+        .contact p {
+            font-size: 1rem;
+            text-align: center;
+        }
+        .contact a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #0a1f44; /* Dark blue */
+            background-color: #0a1f44;
             color: white;
-            border-top: 3px solid #66b2ff; /* Light blue accent */
-            font-size: 0.9em;
+            border-top: 3px solid #66b2ff;
+            font-size: 0.9rem;
         }
         footer p {
             margin: 0;
@@ -125,7 +158,7 @@
 <body>
 
 <header>
-    <img src="logo.png" alt="APEC Consulting Logo">
+    <img src="logo.png" alt="APE Consulting Logo">
     <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -135,13 +168,14 @@
 </header>
 
 <section class="hero" id="home">
-    <h1>Welcome to APEC Consulting</h1>
+    <img src="monkey-logo.png" alt="Happy Monkey Logo">
+    <h1>Welcome to APE Consulting</h1>
     <p>Your partner in career success and email marketing excellence.</p>
 </section>
 
 <section class="section" id="about">
     <h2>About Us</h2>
-    <p>At APEC Consulting, we specialize in helping individuals and businesses achieve their goals. Whether you're preparing for your next big career move or planning a results-driven email marketing campaign, we're here to support you every step of the way.</p>
+    <p>At APE Consulting, we specialize in helping individuals and businesses achieve their goals. Whether you're preparing for your next big career move or planning a results-driven email marketing campaign, we're here to support you every step of the way.</p>
 </section>
 
 <section class="section" id="services">
@@ -170,13 +204,13 @@
     </div>
 </section>
 
-<section class="section" id="contact">
+<section class="section contact" id="contact">
     <h2>Contact Us</h2>
-    <p>Get in touch to learn more about how we can help you succeed. Email us at <a href="mailto:info@apecconsulting.com">info@apecconsulting.com</a>.</p>
+    <p>Get in touch to learn more about how we can help you succeed. Email us at <a href="mailto:info@apeconsulting.com">info@apeconsulting.com</a>.</p>
 </section>
 
 <footer>
-    <p>&copy; 2024 APEC Consulting. All rights reserved. <a href="#home">Back to top</a></p>
+    <p>&copy; 2024 APE Consulting. All rights reserved. <a href="#home">Back to top</a></p>
 </footer>
 
 </body>
