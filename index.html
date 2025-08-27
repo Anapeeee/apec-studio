@@ -58,9 +58,7 @@
       box-shadow:0 4px 10px rgba(0,0,0,.1);
       text-align:center; transition:transform .3s,box-shadow .3s;
     }
-    .service:hover {
-      transform:scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,.15);
-    }
+    .service:hover { transform:scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,.15); }
     .service h3 { font-size:1.4rem; color:#1E6091; margin-bottom:10px; }
     .service p { font-size:.9rem; color:#666; }
 
@@ -90,8 +88,8 @@
 <body>
 
 <header>
-  <!-- logo in repo root -->
-  <img src="monkey-logo.png" alt="APEC Studio Logo" decoding="async">
+  <!-- absolute path for project pages -->
+  <img src="/apec-studio/monkey-logo.png" alt="APEC Studio Logo" decoding="async">
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -102,7 +100,7 @@
 </header>
 
 <section class="hero" id="home">
-  <img src="monkey-logo.png" alt="APEC Studio Logo">
+  <img src="/apec-studio/monkey-logo.png" alt="APEC Studio Logo">
   <h1>Fix your email deliverability. Grow your outreach.</h1>
   <p>We help B2B teams get emails out of spam, build campaigns that convert, and keep CRMs clean — so you can focus on closing deals, not fighting tech.</p>
 </section>
@@ -159,4 +157,3 @@
 
 </body>
 </html>
-
