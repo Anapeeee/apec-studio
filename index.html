@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>APEC Studio — Email & Growth Consulting</title>
-  <!-- Better font: Inter -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -20,7 +20,7 @@
       display:flex; justify-content:space-between; align-items:center;
       box-shadow:0 2px 4px rgba(0,0,0,.1);
     }
-    header img { height:50px; width:auto; }
+    header img { height:60px; }
     nav { display:flex; gap:25px; }
     nav a {
       text-decoration:none; color:#1E6091;
@@ -36,10 +36,10 @@
       position:relative;
     }
     .hero img {
-      width:120px; margin:20px auto;
-      border-radius:16px; background:white; padding:8px;
+      width:150px; margin:20px auto;
+      border-radius:50%; background:white; padding:10px;
     }
-    .hero h1 { font-size:2.8rem; margin:0; font-weight:700; }
+    .hero h1 { font-size:3rem; margin:0; font-weight:700; }
     .hero p { margin-top:20px; font-size:1.2rem; color:#F8F9FA; }
 
     .section { padding:60px 20px; max-width:1100px; margin:0 auto; }
@@ -58,18 +58,11 @@
       box-shadow:0 4px 10px rgba(0,0,0,.1);
       text-align:center; transition:transform .3s,box-shadow .3s;
     }
-    .service:hover { transform:scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,.15); }
+    .service:hover {
+      transform:scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,.15);
+    }
     .service h3 { font-size:1.4rem; color:#1E6091; margin-bottom:10px; }
     .service p { font-size:.9rem; color:#666; }
-
-    .proof {
-      display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px;
-    }
-    .quote {
-      background:white; border:1px solid #ddd; border-radius:10px; padding:20px;
-      font-size:.95rem; color:#555;
-    }
-    .quote .who { margin-top:10px; font-weight:600; color:#1E6091; }
 
     .contact p { font-size:1rem; text-align:center; }
     .contact a { color:#1E6091; text-decoration:none; font-weight:600; }
@@ -88,26 +81,25 @@
 <body>
 
 <header>
-  <!-- absolute path for project pages -->
-  <img src="/apec-studio/monkey-logo.png" alt="APEC Studio Logo" decoding="async">
+  <!-- project site path -->
+  <img src="/apec-studio/monkey-logo.png" alt="APEC Studio Logo">
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
-    <a href="#proof">Proof</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <section class="hero" id="home">
   <img src="/apec-studio/monkey-logo.png" alt="APEC Studio Logo">
-  <h1>Fix your email deliverability. Grow your outreach.</h1>
-  <p>We help B2B teams get emails out of spam, build campaigns that convert, and keep CRMs clean — so you can focus on closing deals, not fighting tech.</p>
+  <h1>Welcome to APEC Studio</h1>
+  <p>Your partner in career success and email marketing excellence.</p>
 </section>
 
 <section class="section" id="about">
   <h2>About Us</h2>
-  <p>APEC Studio is led by Ana, an email deliverability & outreach consultant working with SaaS and services teams worldwide. With hands-on experience across lemlist, HubSpot, and advanced DNS setups, we turn complexity into clarity — so your emails land and your systems scale.</p>
+  <p>At APEC Studio, we specialize in helping businesses achieve their goals. Whether you're fixing deliverability, scaling outreach, or cleaning your CRM, we're here to support you every step of the way.</p>
 </section>
 
 <section class="section" id="services">
@@ -124,24 +116,6 @@
     <div class="service">
       <h3>CRM & Automation</h3>
       <p>HubSpot / Salesforce hygiene, deduplication, sync fixes, and lifecycle automation that keeps your pipeline clean.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="proof">
-  <h2>Proof & Outcomes</h2>
-  <div class="proof">
-    <div class="quote">
-      <p>“Inbox placement went from invisible to 60%+ opens in 3 weeks. Clean work, clear reporting.”</p>
-      <div class="who">Head of Growth, SaaS</div>
-    </div>
-    <div class="quote">
-      <p>“SPF alignment fixed, bounces dropped, and outreach finally stuck. Absolute pro.”</p>
-      <div class="who">Founder, B2B Services</div>
-    </div>
-    <div class="quote">
-      <p>“Pipeline finally flows — no more CRM duplicates or broken syncs.”</p>
-      <div class="who">Sales Ops, Tech Startup</div>
     </div>
   </div>
 </section>
