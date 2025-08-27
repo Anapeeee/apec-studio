@@ -1,217 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APE Consulting</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&family=Open+Sans:wght@300;600&display=swap');
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>APEC Studio — Email & Growth Consulting</title>
+<meta name="description" content="APEC Studio helps founders and teams with email deliverability, outreach campaigns, CRM & automation, and career coaching." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+--ink:#1E293B; /* slate-800 */
+--ink-sub:#475569; /* slate-600 */
+--bg:#F8FAFC; /* slate-50 */
+--brand:#0EA5E9; /* sky-500 */
+--brand-2:#22D3EE; /* cyan-400 */
+--card:#ffffff;
+--ring:rgba(14,165,233,.25);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
 
-        /* Global Styles */
-        body {
-            font-family: 'Helvetica', 'Open Sans', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa; /* Subtle off-white */
-            color: #333;
-            line-height: 1.6;
-        }
 
-        /* Header Styles */
-        header {
-            background-color: #A9D6E5; /* Baby Blue */
-            color: #1E6091; /* Complementary darker shade */
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        header img {
-            height: 60px;
-        }
-        nav {
-            display: flex;
-            gap: 25px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #1E6091;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #57C4E5; /* Lighter modern blue accent */
-        }
+/* Header */
+header{position:sticky;top:0;background:#E0F2FE; /* light sky */
+color:var(--ink);z-index:50;box-shadow:0 1px 0 rgba(30,41,59,.08)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;gap:12px;align-items:center}
+.brand img{height:40px;width:40px;border-radius:12px;background:#fff;padding:4px}
+.brand h1{font-size:1.1rem;margin:0;letter-spacing:.4px}
+.brand .sub{display:block;font-size:.75rem;color:var(--ink-sub);margin-top:2px}
 
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(to bottom, #A9D6E5, #57C4E5); /* Modern baby blue gradient */
-            color: white;
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-            position: relative;
-        }
-        .hero img {
-            width: 150px;
-            margin: 20px auto;
-            border-radius: 50%;
-            background: white;
-            padding: 10px;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin: 0;
-            font-weight: bold;
-        }
-        .hero p {
-            margin-top: 20px;
-            font-size: 1.2rem;
-            color: #F8F9FA; /* Light, soft off-white */
-        }
 
-        /* Section Styles */
-        .section {
-            padding: 60px 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .section h2 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #1E6091;
-        }
-        .section p {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 1rem;
-            color: #555;
-        }
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;align-items:center}
+nav a{font-weight:600;text-transform:uppercase;font-size:.82rem;letter-spacing:.04em}
 
-        /* Services Section */
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .service {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .service:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-        .service h3 {
-            font-size: 1.4rem;
-            color: #1E6091;
-            margin-bottom: 10px;
-        }
-        .service p {
-            font-size: 0.9rem;
-            color: #666;
-        }
 
-        /* Contact Section */
-        .contact p {
-            font-size: 1rem;
-            text-align: center;
-        }
-        .contact a {
-            color: #1E6091;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .contact a:hover {
-            text-decoration: underline;
-        }
+/* Search (excludes GitHub) */
+.search{display:flex;gap:8px;align-items:center}
+.search input{border:1px solid #cfe8f9;background:#fff;border-radius:10px;padding:10px 12px;font-size:.95rem;min-width:220px;outline:none}
+.search input:focus{box-shadow:0 0 0 4px var(--ring)}
+.btn{display:inline-block;background:var(--ink);color:#fff;padding:10px 14px;border-radius:12px;font-weight:600;border:0;cursor:pointer}
+.btn:hover{opacity:.95}
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #A9D6E5;
-            color: #1E6091;
-            border-top: 3px solid #57C4E5;
-            font-size: 0.9rem;
-        }
-        footer p {
-            margin: 0;
-        }
-        footer a {
-            color: #1E6091;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
 
-<header>
-    <img src="monkey-logo.png" alt="APE Consulting Logo">
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+/* Hero */
+.hero{position:relative;isolation:isolate;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff}
+.hero .inner{padding:72px 20px 88px}
+.hero h2{margin:0 0 12px;font-size:2.6rem;letter-spacing:.2px}
+.hero p{margin:0 0 24px;font-size:1.1rem;opacity:.95;max-width:720px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.cta .btn.primary{background:#0b87c5}
+.cta .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.85)}
 
-<section class="hero" id="home">
-    <img src="monkey-logo.png" alt="Happy Monkey Logo">
-    <h1>Welcome to APE Consulting</h1>
-    <p>Your partner in career success and email marketing excellence.</p>
-</section>
 
-<section class="section" id="about">
-    <h2>About Us</h2>
-    <p>At APE Consulting, we specialize in helping individuals and businesses achieve their goals. Whether you're preparing for your next big career move or planning a results-driven email marketing campaign, we're here to support you every step of the way.</p>
-</section>
+/* Sections */
+section.section{padding:64px 20px}
+.section h3{font-size:2rem;margin:0 0 12px;text-align:center}
+.section p.lead{margin:0 auto 28px;max-width:800px;text-align:center;color:var(--ink-sub)}
 
-<section class="section" id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-        <div class="service">
-            <h3>CV Making</h3>
-            <p>Craft a professional CV tailored to your goals.</p>
-        </div>
-        <div class="service">
-            <h3>Job Search Assistance</h3>
-            <p>Find the right job opportunities with our help.</p>
-        </div>
-        <div class="service">
-            <h3>Interview Preparation</h3>
-            <p>Be confident and prepared for your interviews.</p>
-        </div>
-        <div class="service">
-            <h3>Email Marketing</h3>
-            <p>Create and manage impactful email campaigns.</p>
-        </div>
-        <div class="service">
-            <h3>Email Outreach</h3>
-            <p>Boost connections with effective outreach strategies.</p>
-        </div>
-    </div>
-</section>
 
-<section class="section contact" id="contact">
-    <h2>Contact Us</h2>
-    <p>Get in touch to learn more about how we can help you succeed. Email us at <a href="mailto:info@apeconsulting.com">info@apeconsulting.com</a>.</p>
-</section>
+/* Services grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--card);border-radius:16px;padding:22px;border:1px solid #e6eff7;box-shadow:0 6px 18px rgba(2,20,34,.05);transition:transform .2s ease, box-shadow .2s ease}
+.card:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(2,20,34,.08)}
+.card h4{margin:0 0 8px;font-size:1.2rem}
+.card p{margin:0 0 14px;color:var(--ink-sub);font-size:.98rem}
+.card .actions{display:flex;gap:10px;flex-wrap:wrap}
+.chip{display:inline-block;background:#ecfeff;border:1px solid #cffafe;color:#0e7490;border-radius:999px;padding:6px 10px;font-size:.75rem;font-weight:600;margin:2px 0}
 
-<footer>
-    <p>&copy; 2024 APE Consulting. All rights reserved. <a href="#home">Back to top</a></p>
-</footer>
 
-</body>
+/* Proof */
+.proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.quote{background:#ffffff;border:1px solid #e6eff7;border-radius:16px;padding:18px}
+.quote p{margin:0;color:var(--ink-sub)}
+.quote .who{margin-top:10px;font-weight:700;color:var(--ink)}
+
+
+/* Contact/Footer */
+.contactbox{background:#e6f6ff;border:1px dashed #b3e1ff;border-radius:16px;padding:22px;text-align:center}
+footer{background:#E0F2FE;border-top:1px solid #bee3f8}
 </html>
